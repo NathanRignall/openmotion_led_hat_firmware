@@ -35,7 +35,6 @@
       "gdbPath" : "arm-none-eabi-gdb",
       "gdbTarget": "localhost:3333",
       "svdFile": "../pico-sdk/src/rp2040/hardware_regs/rp2040.svd",
-      "runToMain": true,
       "postRestartCommands": [
           "break main",
           "continue"
