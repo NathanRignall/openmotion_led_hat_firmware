@@ -37,6 +37,7 @@ target_link_libraries(MotionLedHat
         pico_stdlib
         pico_unique_id
         hardware_pwm
+        hardware_adc
         )
 
 # Add any user requested libraries
