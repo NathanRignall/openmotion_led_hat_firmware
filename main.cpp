@@ -281,16 +281,12 @@ int main() {
     bool effectReset = false;
 
     // IR LED
-    gpio_set_function(21, GPIO_FUNC_PWM);
-    uint ir_led_slice = pwm_gpio_to_slice_num(21);
-    uint ir_led_channel = pwm_gpio_to_channel(21);
+    gpio_set_function(IR_LED_PIN, GPIO_FUNC_PWM);
+    uint ir_led_slice = pwm_gpio_to_slice_num(IR_LED_PIN);
+    uint ir_led_channel = pwm_gpio_to_channel(IR_LED_PIN);
     pwm_set_wrap(ir_led_slice, 255);
     pwm_set_chan_level(ir_led_slice, ir_led_channel, 0);
     pwm_set_enabled(ir_led_slice, true);
-
-    gpio_init(IR_LED_PIN);
-    gpio_set_dir(IR_LED_PIN, GPIO_OUT);
-    gpio_put(IR_LED_PIN, 0);
 
     // temperature sensor
     adc_init();
